@@ -80,7 +80,7 @@ page = 1
 InternalDatabase.connect()
 while page < 60:
     print ("Page: "+ str(page))
-    response = requests.get("https://gogoanimeHD.io/anime-list.html?page="+str(page))
+    response = requests.get("https://www8.gogoanime.network/anime-list.html?page="+str(page))
     document = BeautifulSoup(response.text, 'html.parser').find('div', class_="anime_list_body")
     for li in document.find_all('li'):
         document2 = BeautifulSoup(li['title'].encode('utf-8'), 'html.parser')
